@@ -1,17 +1,19 @@
 .currentCard {
-	/* top: 20rem;
-	right: 10rem;
-	scale: 1.6; */
+	position: absolute !important;
+    top: 60%;
+    left: 50%;
 	z-index: 9;
+    transform: translate3d(-50%, -50%, 4000px) rotateY(360deg) scale(1.6);
+	perspective: 1500px;
+	transition: 1s !important;
 }
-
-@keyframes expandCard {
-	to {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
+.dummy{
+	position: absolute;
+	height: 400px;
+}
+.dummy-works{
+	position: relative;
+	height: 400px;
 }
 
 .card__rotator {
@@ -28,10 +30,27 @@
 }
 
 .card__back {
+	position: absolute;
 	transform: rotateY(180deg);
-	z-index: -2111;
+	z-index: -1;
 	width: 100%;
-	display: none;
+}
+
+.card__back-works{
+	position: absolute;
+	transform: rotateY(180deg);
+	z-index: -1;
+	width: 100%;
+	animation: removeBackCard 1s;
+}
+
+@keyframes removeBackCard {
+	0%,30%{
+		z-index: 0;
+	}
+	100%{
+		z-index: -1;
+	}
 }
 
 .card__front {
@@ -72,11 +91,12 @@
 	flex-flow: column wrap;
 	align-content: center;
 	position: relative;
+	transition: 1s;
 }
 .card {
 	position: absolute;
-	width: 80%;
-	height: 80%;
+	height: 90%;
+	width: 90%;
 	transform: perspective(var(--perspective)) rotateX(var(--rotateX))
 		rotateY(var(--rotateY));
 	transition: transform 450ms ease;
@@ -87,8 +107,8 @@
     cursor: pointer;
 }
 .mouse {
-	width: 233px;
-    height: 79px;
+	width: 165px;
+    height: 100px;
     cursor: pointer;
 }
 

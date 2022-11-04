@@ -6,6 +6,7 @@
     height: 100%;
     max-width: max-content;
     margin: auto;
+    padding: 2rem 0;
 }
 
 .card-grid.active {
@@ -15,12 +16,14 @@
 @media (min-width: 600px) {
 .card-grid {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 4vw;
+    grid-gap: 8vh 0vw;
+    padding: 2rem 0;
 }
 }
 
 @media (min-width: 900px) {
 .card-grid {
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 0;
 }
 }
