@@ -1,0 +1,26 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 8vw;
+    transform-style: preserve-3d;
+    height: 100%;
+    max-width: max-content;
+    margin: auto;
+}
+
+.card-grid.active {
+    z-index: 99;
+}
+
+@media (min-width: 600px) {
+.card-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4vw;
+}
+}
+
+@media (min-width: 900px) {
+.card-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}

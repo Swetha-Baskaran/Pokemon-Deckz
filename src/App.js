@@ -1,24 +1,23 @@
-import './App.css';
-import ModalOne from './inputModals/modalone';
-import ModalThree from './inputModals/modalthree';
-import ModalTwo from './inputModals/modaltwo';
-import ModalFour from './inputModals/modalfour';
-import SmallModal from './modal1';
-import LoginWeb from './login/loginweb';
-import ResetPassword from './login/resetPassword';
+import "./App.css";
+import { useState } from "react";
+import Section from "./components/section/index";
 
 function App() {
-  return (
-    <div className="App">
-      {/* <SmallModal /> */}
-      {/* <ModalOne /> */}
-      {/* <ModalTwo /> */}
-      {/* <ModalThree />   */}
-      {/* <ModalFour /> */}
-      <LoginWeb />
-      {/* <ResetPassword /> */}
-    </div>
-  );
+	let [currentCard, setCurrentCard] = useState("");
+	const handleCardChange = value => {
+		setCurrentCard(value);
+	};
+	return (
+		<div
+			className='App'
+			onClick={() => {
+				if(currentCard !== ""){
+          handleCardChange("");
+        }
+			}}>
+			<Section currentCard={currentCard} changeCard={handleCardChange} />
+		</div>
+	);
 }
 
 export default App;

@@ -1,7 +1,23 @@
-body {
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap") format("truetype");
+  font-weight: bold;
+  }
+body, html {
+  height: 100%;
+  padding: 0;
   margin: 0;
-  
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(57, 60, 66);
+}
+
+a {
+  color: cyan;
 }
