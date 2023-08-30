@@ -1,3 +1,6 @@
+![image](https://github.com/Swetha-Baskaran/Pokemon-Deckz/assets/74134426/22bb39df-4e88-4ab8-ba39-bf6e8f3f5804)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
